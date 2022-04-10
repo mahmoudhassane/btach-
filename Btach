@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Voucher</title>
+  <style>
+    *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  padding: 0;
+  margin: 0;
+  direction: ltr;
+  overflow-x: hidden;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+.voucher {
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #eff4f9;
+}
+
+.voucher_head {
+  background-image: linear-gradient(to right, #00618a, #88a8f2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px 10px;
+  flex-shrink: 0;
+}
+
+.voucher_head .img {
+  width: 163px;
+  height: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.voucher_head .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voucher_head h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+  line-height: 42px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.voucher_content {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.receive_msg {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #dde6e9;
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.qrCode {
+  background-color: rgba(255, 255, 255, 0.79);
+  padding: 18px 33px 14px;
+  width: fit-content;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.qrCode .qrCode_img {
+  width: 196px;
+  height: 196px;
+  overflow: hidden;
+}
+
+.qrCode .qrCode_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.qrCode .qrCode_num {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
+  text-align: center;
+}
+
+.gift_box {
+  background-color: rgba(255, 255, 255, 0.79);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 10px;
+  border: 2px dashed #aab4bf;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 95%;
+  margin-bottom: 10px;
+}
+
+.gift_box .gift_img {
+  width: 123px;
+  height: 123px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.gift_box .gift_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gift_box .gift_info {
+  padding: 0 50px 0 16px;
+  border-left: 1px dashed #707070;
+}
+
+[dir="rtl"] .gift_box .gift_info {
+  padding: 0 16px 0 50px;
+  border-left: 0;
+  border-right: 1px dashed #707070;
+}
+
+.gift_box .gift_info .name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.gift_box .gift_info .from {
+  font-size: 12px;
+  font-weight: 600;
+  color: #647c86;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.gift_box .gift_info .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #005c83;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.gift_box .gift_info .price span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000816;
+  margin-inline-start: 6px;
+}
+
+.voucher_foot {
+  background-color: #000000;
+  padding: 5px 44px;
+  flex-shrink: 0;
+}
+
+.voucher_foot .guide {
+  font-size: 13px;
+  font-weight: 600;
+  color: #dde6e9;
+  margin-bottom: 2px;
+}
+
+.voucher_foot .expire {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fed300;
+}
+  </style>
+</head>
+
+<body dir="ltr">
+<div class="voucher">
+  <div class="voucher_head">
+    <div class="img">
+      <img src="../images/gift.png" alt="">
+    </div>
+    
+  </div>
+  <div class="voucher_content">
+    <div class="receive_msg">You have received a Gift voucher</div>
+    <div class="qrCode">
+      <div class="qrCode_img">
+        <img src="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADMAQAAAAAXWXFfAAAA0UlEQVR42u2Y4Q3FIAiE2YzVGeltwKtwYJPaAY7UpIny9c8V5LTib+MnHxqETGKom5por/iRLoUZ115NQJdMDbTmWM1BEfd5aCXx7WtwIpTopTeCh+qlRGgiphD87DaUqIZl6OQOlAgtUqKneBTomgxA1VASwQb4EUpTt+pbt+FFUZupE0+nkhpBcsCyAB+AdktJd8Peo0fbAtLTkE9+VCadcv3g5qTI7oLzFjMIVRYlN98Y1HsvXxuA6sopdSKxtgBmtI/EsfPyMsOPvr9Y49EfByqPKMYyXFIAAAAASUVORK5CYII=" alt="">
+      </div>
+      <div class="qrCode_num">93386885606874</div>
+    </div>
+    <div class="gift_box">
+      <div class="gift_img">
+        <img src="../images/myfawry/coupman.png"  alt="">
+      </div>
+      <div class="gift_info">
+        <div class="name">Coup </div>
+        <div class="from">Coup</div>
+        <div class="price">1000.0</div>
+      </div>
+    </div>
+  </div>
+  <div class="voucher_foot">
+    <div class="guide">Show this QR at the store to redeem your Gift</div>
+    <div class="expire"> Expire in 01-10-2022</div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
